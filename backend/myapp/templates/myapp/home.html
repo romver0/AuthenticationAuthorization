@@ -1,0 +1,16 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+    <span id="home">Home</span>
+    <br>
+    {% if user.is_authenticated  %}
+        <span>Хоть ты и зарегался,всё-равно чекни
+            <a href="https://github.com/romver0" target="_blank">Другие мои работы</a>
+        </span>
+    {% else %}
+        <span>Зайди,тебе понравиться
+            <a href="https://github.com/romver0" target="_blank">Другие мои работы</a>
+        </span>
+    {% endif %}
+{% endblock %}
+

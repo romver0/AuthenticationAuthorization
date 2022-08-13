@@ -1,0 +1,18 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<h1>Мой профиль</h1>
+    {% if user.is_authenticated  %}
+                <h3 class="user">Никнейм: <span id="username">{{ user.username }}</span></h3>
+            {% endif %}
+    <div class="row justify-content-center my-3">
+        <div class="col-5" data-tooltip="Твоя аватарка">
+            <img class="img-fluid" src="https://avatarko.ru/img/kartinka/20/kosmonavt_19830.jpg" alt="Roman" date-toggle="tooltip" >
+        </div>
+    </div>
+{% endblock %}
+
+{#{% block content2 %}#}
+{#<h3>Я нахожусь вне</h3>#}
+{#{% endblock %}#}
+
